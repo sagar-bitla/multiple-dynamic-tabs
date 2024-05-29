@@ -1,0 +1,45 @@
+
+<div class="row">
+    <div class="col-6" style="border-left: 1px solid gray ;">
+        <h5>Multiple Hobbies Selection--{{selectedHobbies | json}}</h5>
+         <div class="row">
+            <div class="col-12">
+                <ul class="list-group list-group-horizontal" id="myHobby">
+                    <li class="list-group-item" [ngClass]="checkIfSelectd('Cricket')==-1?'':'bg-success'" (click)="selectHobby('Cricket')">Cricket</li>
+                    <li class="list-group-item" [ngClass]="checkIfSelectd('Online Games')==-1?'':'bg-success'" (click)="selectHobby('Online Games')">Online Games</li>
+                    <li class="list-group-item" [ngClass]="checkIfSelectd('Drawing')==-1?'':'bg-success'" (click)="selectHobby('Drawing')">Drawing</li>
+                    <li class="list-group-item" [ngClass]="checkIfSelectd('Singing')==-1?'':'bg-success'" (click)="selectHobby('Singing')">Singing</li>
+                </ul>
+            </div>
+            <div class="col-12 pt-3">
+                <button class="btn btn-primary">Get Selected Hobbies</button>
+            </div>
+            <div class="col-12">
+                <p id="selectdHobbies"><span>Online Games</span></p>
+            </div>
+         </div>
+    </div>
+
+
+    <div class="col-6" style="border-left: 1px solid gray ;">
+        <h5>Single Hobbies Selection--{{singleHobby | json}}</h5>
+         <div class="row">
+            <div class="col-12">
+                <ul class="list-group list-group-horizontal" id="myHobby">
+                    <li class="list-group-item" [ngClass]="singleHobby=='Cricket'?'bg-success':''" (click)="selectSingleHobby('Cricket')">Cricket</li>
+                    <li class="list-group-item" [ngClass]="singleHobby=='Online Games'?'bg-success':''" (click)="selectSingleHobby('Online Games')">Online Games</li>
+                    <li class="list-group-item" [ngClass]="singleHobby=='Drawing'?'bg-success':''" (click)="selectSingleHobby('Drawing')">Drawing</li>
+                    <li class="list-group-item" [ngClass]="singleHobby=='Singing'?'bg-success':''" (click)="selectSingleHobby('Singing')">Singing</li>
+                </ul>
+            </div>
+            <div class="col-12 pt-3">
+                <button class="btn btn-primary">Get Selected Hobbies</button>
+            </div>
+            <div class="col-12">
+                <p id="selectdHobbies"><span>Online Games</span></p>
+            </div>
+         </div>
+    </div>
+</div>
+
+
